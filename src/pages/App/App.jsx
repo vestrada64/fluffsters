@@ -13,6 +13,16 @@ import LandingPage from '../LandingPage/LandingPage';
 
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      puppy: null,
+      name: "",
+      description: "",
+      breed: ""
+
+    }
+  }
 
 handleSignup = () => {
   this.setState({user: userService.getUser()});
