@@ -1,0 +1,23 @@
+* {
+    font-family: Comic Sans MS;
+    text-align: center;
+    background: url(https://i.imgur.com/5RGsbDV.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+
+.App-title {
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 3em;
+    margin: .2em .5em;
+    color: white;
+}
+
+header {
+    font-size: 40px;
+}

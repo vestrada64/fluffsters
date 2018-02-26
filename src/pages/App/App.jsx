@@ -48,7 +48,7 @@ handleLogout = () => {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Fluffsters</h1>
+          <h1 className="App-title">Fluffsters 🐶</h1>
         </header>
         <Router>
           <Switch>
