@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(bodyParser.json());
 
+// Mount our custom auth middleware
+app.use(require('./config/auth'));
+
 // Put API routes here, before the "catch all" route
 
 // The following "catch all" route is necessary for
