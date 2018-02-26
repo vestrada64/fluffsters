@@ -11,3 +11,13 @@ function createJWT(user) {
         {expiresIn: '24h'}
     );
 }
+
+function signup(req, res) {
+    var user = new User(req.body);
+    user.save()
+    .then(user => {
+        res.json({token: createJWT(user)});
+    })
+    // User data invalid (most likely duplicate email)
+    .catch(err => res.status(400).json(err));
+}
