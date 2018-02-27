@@ -59,8 +59,7 @@ componentDidMount() {
                     user={this.state.user}
                     handleLogout={this.handleLogout}
                     />
-
-            }/>
+                  }/>
             <Route exact path='/login' render={(props) => 
                   <LoginPage
                     {...props}
@@ -77,7 +76,8 @@ componentDidMount() {
                   userService.getUser() ?
                   <AboutUsPage />
                     :
-                  <Redirect to='/' />
+                  <Redirect to='/' 
+                  />
                 }/>
           </Switch>
         </Router>

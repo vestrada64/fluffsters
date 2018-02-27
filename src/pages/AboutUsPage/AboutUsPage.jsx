@@ -5,10 +5,10 @@ import './AboutUsPage.css';
 const AboutUsPage = () => {
     return (
       <div className='AboutUs'>
-          <header className="Header">Fluffsters</header>
+          <header className="Header">- Our Mission -</header>
           <Link to='/'>Home</Link>
           <h1> 
-              Test! Puppies rock!
+          Comfort, companionship, and love. If depression makes you feel lonely, pets can break the cycle.
           </h1>
       </div>
     );
