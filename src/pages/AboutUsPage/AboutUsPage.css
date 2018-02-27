@@ -2,9 +2,55 @@
     color: white;
 }
 
+.AboutUs {
+    padding: 40px;
+}
 
 h1 {
     text-align: center;
     color: white;
     font-size: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+img {
+    float: left;
+    margin: 40px;
+}
+
+.homebtn {
+    width: 100px;
+    background: #09C;
+    color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 4px;
+    border-radius: 15px;
+    border: 1p solid #999;
+}
+
+a {
+    width: 100px;
+    background: #09C;
+    color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 4px;
+    border-radius: 15px;
+    border: 1p solid #999;
 }
