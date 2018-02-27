@@ -73,6 +73,12 @@ componentDidMount() {
                     handleSignup={this.handleSignup}
                   />
                 }/>
+                <Route exact path='/aboutus' render={() =>
+                  userService.getUser() ?
+                  <AboutUsPage />
+                    :
+                  <Redirect to='/' />
+                }/>
           </Switch>
         </Router>
       </div>

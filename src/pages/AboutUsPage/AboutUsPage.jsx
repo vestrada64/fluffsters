@@ -8,7 +8,7 @@ const AboutUsPage = () => {
           <header className="Header">Fluffsters</header>
           <Link to='/'>Home</Link>
           <h1> 
-              
+              Test! Puppies rock!
           </h1>
       </div>
     );
