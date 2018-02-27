@@ -17,14 +17,13 @@ function signup(user) {
     //.then((token) => token.token);
   }
 
-  function login(creds) {
+  function login(user) {
     return fetch(BASE_URL + 'login', {
       method: 'POST',
       headers: new Headers({'Content-Type': 'application/json'}),
-      body: JSON.stringify(creds)
+      body: JSON.stringify(user)
     })
     .then(res => {
-      // Valid login if we have a status of 2xx (res.ok)
       if (res.ok) return res.json();
       throw new Error('Bad credentials');
     })

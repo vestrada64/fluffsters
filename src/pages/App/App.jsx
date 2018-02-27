@@ -24,6 +24,11 @@ class App extends Component {
     }
   }
 
+handleLogout = () => {
+    userService.logout();
+    this.setState({user: null});
+}
+  
 handleSignup = () => {
   this.setState({user: userService.getUser()});
 }
@@ -32,10 +37,6 @@ handleLogin = () => {
   this.setState({user: userService.getUser()});
 }
 
-handleLogout = () => {
-  userService.logout();
-  this.setState({user: null});
-}
   
 /*------- Lifecycle Methods ---------*/
 
