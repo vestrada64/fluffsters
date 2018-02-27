@@ -76,7 +76,7 @@ componentDidMount() {
                   userService.getUser() ?
                   <AboutUsPage />
                     :
-                  <Redirect to='/' 
+                  <Redirect to='/login' 
                   />
                 }/>
           </Switch>
