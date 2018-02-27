@@ -1,21 +1,15 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import './LandingPage.css';
+import NavBar from '../../components/NavBar/NavBar';
 
-class LandingPage extends Component {
-    constructor() {
-      super();
-      this.state = {message: ''}
-    }
+const LandingPage = (props) => {
+  return (
+    <div className="LandingPage">
+      <NavBar user={props.user} handleLogout={props.handleLogout} />
+      </div>
+  );
+
+}
   
-    render() {
-      return (
-        <div className='LandingPage'>
-          <Link to='/signup'>Sign Up</Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to='/login'>Log In</Link>
-        </div>
-      );
-    }
-  };
 
 export default LandingPage;

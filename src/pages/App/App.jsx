@@ -40,10 +40,10 @@ handleLogin = () => {
   
 /*------- Lifecycle Methods ---------*/
 
-  componentDidMount() {
-    let user = userService.getUser();
-    this.setState({user});
-  }
+componentDidMount() {
+  let user = userService.getUser();
+  this.setState({user});
+}
 
   render() {
     return (
@@ -54,7 +54,11 @@ handleLogin = () => {
         <Router>
           <Switch>
             <Route exact path='/' render={() => 
-                    <LandingPage />
+                    <LandingPage 
+                    user={this.state.user}
+                    handleLogout={this.handleLogout}
+                    />
+
             }/>
             <Route exact path='/login' render={(props) => 
                   <LoginPage
