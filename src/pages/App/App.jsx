@@ -51,6 +51,7 @@ componentDidMount() {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Fluffsters 🐶</h1>
+          <h2 className="info"> Feeling down? You've come to the right place! </h2>
         </header>
         <Router>
           <Switch>

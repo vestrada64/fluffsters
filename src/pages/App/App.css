@@ -21,3 +21,23 @@
 header {
     font-size: 40px;
 }
+
+.info {
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 24px;
+    margin: .2em .5em;
+    color: white; 
+}
+
+.NavBar-link {
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
