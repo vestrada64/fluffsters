@@ -10,6 +10,7 @@ import userService from '../../utils/userService';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import LandingPage from '../LandingPage/LandingPage';
+import AboutUsPage from '../AboutUsPage/AboutUsPage';
 
 class App extends Component {
 
