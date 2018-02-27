@@ -4,5 +4,59 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    
+}
+
+.header-footer {
+    color: white;
+}
+
+input.form-control {
+    background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    font-size: 14px;
+}
+
+.form-horizontal {
+    position: absolute;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 600px;
+    height: 250px;
+    text-align: center;
+    color: white;
+    box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+input {
+    width: 375px;
+    display: block;
+    border: 1px solid #999;
+    height: 25px;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #09C;
+    color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 30px;
+    border-radius: 15px;
+    border: 1p solid #999;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #09C;
+}
+
+textarea:focus, input:focus {
+border: 1px solid #09C;
 }
