@@ -11,6 +11,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import LandingPage from '../LandingPage/LandingPage';
 import AboutUsPage from '../AboutUsPage/AboutUsPage';
+import PuppyPage from '../PuppyPage/PuppyPage';
 
 class App extends Component {
 
@@ -76,6 +77,16 @@ componentDidMount() {
                 <Route exact path='/aboutus' render={() =>
                   userService.getUser() ?
                   <AboutUsPage />
+                    :
+                  <Redirect to='/login' 
+                  />
+                }/>
+                <Route exact path='/puppies' render={() =>
+                  userService.getUser() ?
+                  <PuppyPage
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                  />
                     :
                   <Redirect to='/login' 
                   />
