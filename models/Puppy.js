@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const puppySchema = new Schema({
     name: String,
     breed: String,
+    image_url: String,
     description: String
 
 });

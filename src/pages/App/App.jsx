@@ -12,16 +12,19 @@ import LoginPage from '../LoginPage/LoginPage';
 import LandingPage from '../LandingPage/LandingPage';
 import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import PuppyPage from '../PuppyPage/PuppyPage';
+import ShowPuppyPage from './../ShowPuppyPage/ShowPuppyPage';
+
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      puppy: null,
+      puppies: [],
       name: "",
-      description: "",
-      breed: ""
+      breed: "",
+      puppyImage_url:"",
+      description: ""
 
     }
   }
@@ -45,6 +48,10 @@ handleLogin = () => {
 componentDidMount() {
   let user = userService.getUser();
   this.setState({user});
+  fetch("/api/puppies")
+  .then(res => res.json())
+  .then(puppies => this.setState({ puppies }))
+  .catch(err => console.log(err))
 }
 
   render() {
@@ -86,6 +93,7 @@ componentDidMount() {
                   <PuppyPage
                   user={this.state.user}
                   handleLogout={this.handleLogout}
+                  puppies={this.state.puppies}
                   />
                     :
                   <Redirect to='/login' 

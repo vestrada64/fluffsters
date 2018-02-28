@@ -11,6 +11,8 @@ const NavBar = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='/aboutus'>What is this App about?</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <Link to ="/puppies" className="NavBar-link">PUPPY GALLERY</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     :
     <div>
