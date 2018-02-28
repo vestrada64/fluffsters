@@ -99,12 +99,18 @@ componentDidMount() {
                   <Redirect to='/login' 
                   />
                 }/>
+                <Route path="/puppies/:id" render={ (props) => 
+                <ShowPuppyPage 
+                beanData={this.state.beans[props.match.params.id]} 
+                /> 
+                }/>
           </Switch>
         </Router>
       </div>
     );
   }
 }
+
 
 
 export default App;
