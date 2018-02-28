@@ -23,7 +23,7 @@ class App extends Component {
       puppies: [],
       name: "",
       breed: "",
-      puppyImage_url:"",
+      puppyImage_url: "",
       description: ""
 
     }
@@ -101,7 +101,7 @@ componentDidMount() {
                 }/>
                 <Route path="/puppies/:id" render={ (props) => 
                 <ShowPuppyPage 
-                beanData={this.state.beans[props.match.params.id]} 
+                puppyData={this.state.puppies[props.match.params.id]} 
                 /> 
                 }/>
           </Switch>
