@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const puppyController = require('./../../controllers/puppyController');
+const puppiesController = require('./../../controllers/puppiesController');
 
-router.get('/', puppyController.index);
+router.get('/', puppiesController.index);
 
 module.exports = router;

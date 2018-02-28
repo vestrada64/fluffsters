@@ -38,3 +38,6 @@ Puppy.remove({})
     console.log(puppies);
     process.exit();
 })
+.catch(function(err) {
+    console.log(`seed failed because of ${err}`)
+})
