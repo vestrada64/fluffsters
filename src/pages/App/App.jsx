@@ -23,7 +23,7 @@ class App extends Component {
       puppies: [],
       name: "",
       breed: "",
-      puppyImage_url: "",
+      image_url: "",
       description: ""
 
     }
