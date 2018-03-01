@@ -37,6 +37,7 @@ h4 {
 }
 
 .abouthomebtn {
+    text-decoration: none;
     width: 100px;
     background: #09C;
     color: #fff;
@@ -46,12 +47,13 @@ h4 {
     border: 1p solid #999;
 }
 
-a {
-    width: 100px;
+.article {
+    text-decoration: none;
+    text-align: center;
     background: #09C;
     color: #fff;
     font-family: Tahoma, Geneva, sans-serif;
     padding: 4px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1p solid #999;
 }

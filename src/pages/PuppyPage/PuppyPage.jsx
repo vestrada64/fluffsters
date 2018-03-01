@@ -10,9 +10,9 @@ const PuppyPage = ({ puppies }, props) => (
         <Link className ="homebtn"to='/'>Home</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <Link className ="aboutus" to='/aboutus'>What is this App about?</Link>
-        <ul className="puppyimg">
-        { puppies.map((puppy, idx) => <li key={idx}><Link to={`/puppies/${idx}`}>{puppy.name}<img className="showpuppy" src={puppy.image_url}></img></Link></li>) }
-        </ul>
+        <div className="puppyimg">
+        { puppies.map((puppy, idx) => <div key={idx}><Link className="Name" to={`/puppies/${idx}`}><h3 className="puppyName">{puppy.name}</h3><img className="showpuppy" src={puppy.image_url}></img></Link></div>) }
+        </div>
     </div>
         
 )

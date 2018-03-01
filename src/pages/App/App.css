@@ -31,6 +31,7 @@ header {
 }
 
 .NavBar-link {
+    text-decoration: none;
     width: 115px;
     height: 25px;
     background: #4E9CAF;

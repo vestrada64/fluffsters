@@ -13,6 +13,10 @@ header {
     left: 45%;
 }
 
+.Name {
+    text-decoration: none;
+}
+
 .puppyimg {
     text-align: center;
 }
