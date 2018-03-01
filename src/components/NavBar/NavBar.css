@@ -1,4 +1,13 @@
+.NavBar {
+  text-align: center;
+}
+
 .NavBar-welcome {
+  text-align: center;
   color: white;
   font-size: 20px;
+}
+
+NavBar-link {
+  text-align: center;
 }

@@ -3,17 +3,16 @@ header {
 }
 
 .homebtn {
-    text-align: center;
+    position: relative;
+    left: 40%;
 }
 
 .aboutus {
-    text-align: center;
+    margin: 4px;
+    position: relative;
+    left: 45%;
 }
 
 .puppyimg {
-    display: inline-block;
-    margin: 50px;
-    height: 520px;
-    width: 400px;
-    margin-left: 155px;
+    text-align: center;
 }
