@@ -3,6 +3,7 @@
 }
 
 .AboutUs {
+    background-color: black;
     padding: 40px;
 }
 
@@ -30,7 +31,7 @@ h4 {
     font-size: 15px;
 }
 
-img {
+.aboutusimg {
     float: left;
     margin: 40px;
 }
