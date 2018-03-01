@@ -1,0 +1,17 @@
+.imgpuppy {
+    border: 10px double white;
+}
+
+.backbtn {
+    text-decoration: none;
+    text-align: center;
+    background: #09C;
+    color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 4px;
+    border-radius: 20px;
+    border: 1p solid #999;   
+    margin: 4px;
+    position: relative;
+    left: 45%;
+}

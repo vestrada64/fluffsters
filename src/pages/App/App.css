@@ -42,3 +42,16 @@ header {
     color: white;
     font-weight: bold;
 }
+
+.NavBar-about {
+    text-decoration: none;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}

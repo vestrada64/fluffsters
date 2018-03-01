@@ -9,9 +9,9 @@ const NavBar = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='' className='NavBar-link' onClick={props.handleLogout} >LOG OUT</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to='/aboutus'>What is this App about?</Link>
+      <Link className="NavBar-about" to='/aboutus'>Information</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to ="/puppies" className="NavBar-link">PUPPY GALLERY</Link>
+      <Link to ="/puppies" className="NavBar-link">Gallery</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     :
