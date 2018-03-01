@@ -9,25 +9,25 @@ Puppy.remove({})
         {
             name: "Jack",
             breed: "Beagle",
-            image_url: "https://i.imgur.com/ZhvofrCs.jpg",
+            image_url: "https://i.imgur.com/ZhvofrCm.jpg",
             description: "Small and cute, but sassy."
         },
         {
             name: "Loki",
             breed: "Corgi",
-            image_url: "https://i.imgur.com/U2doY5Ps.jpg",
+            image_url: "https://i.imgur.com/U2doY5Pm.jpg",
             description: "A little Loaf."
         },
         {
             name: "Pelucha",
             breed: "Pomeranian",
-            image_url: "https://i.imgur.com/R0hfnCps.png",
+            image_url: "https://i.imgur.com/R0hfnCpm.png",
             description: "Full of Love.",
         },
         {
             name: "Teddy",
             breed: "Shiba Inu",
-            image_url: "https://i.imgur.com/26EefyRs.jpg",
+            image_url: "https://i.imgur.com/26EefyRm.jpg",
             description: "Your Personal TeddyBear"
         }
     ])
