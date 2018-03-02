@@ -4,7 +4,7 @@ import './PuppyPage.css';
 import './../ShowPuppyPage/ShowPuppyPage';
 
 const PuppyPage = ({ puppies }, props) => (
-    <div className="Form">
+    <div>
         <header>Puppy Gallery</header>
         <Link className ="homebtn"to='/'>Home</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

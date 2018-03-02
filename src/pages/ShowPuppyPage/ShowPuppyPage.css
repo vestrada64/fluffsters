@@ -1,5 +1,6 @@
 .imgpuppy {
-    border: 10px double white;
+    border-radius: 100%;
+    box-shadow: 8px 8px 10px #aaa;
 }
 
 .backbtn {

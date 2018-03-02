@@ -1,3 +1,4 @@
+
 header {
     color: white;
 }
@@ -33,10 +34,10 @@ header {
     text-decoration: none;
 }
 
-.puppyimg {
-    text-align: center;
-}
-
 .showpuppy {
-    border: 10px double white;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;
+    border-radius: 100%;
+    box-shadow: 8px 8px 10px #aaa;
 }
