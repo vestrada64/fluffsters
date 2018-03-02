@@ -7,13 +7,14 @@ import {
   Redirect
 } from 'react-router-dom';
 import userService from '../../utils/userService';
+import tokenService from '../../utils/tokenService';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import LandingPage from '../LandingPage/LandingPage';
 import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import PuppyPage from '../PuppyPage/PuppyPage';
 import ShowPuppyPage from './../ShowPuppyPage/ShowPuppyPage';
-import CommentsPage from './../CommentsPage/CommentsPage';
+import NewCommentsPage from './../NewCommentsPage/NewCommentsPage';
 
 
 class App extends Component {
@@ -35,9 +36,9 @@ onNameChange = (e) => {
   })
 }
 
-onCommentsChange = (e) => {
+onDescriptionChange = (e) => {
   this.setState({
-    commentsDescription: e.target.value
+    description: e.target.value
   })
 }
 
@@ -62,14 +63,16 @@ handleLogin = () => {
 componentDidMount() {
   let user = userService.getUser();
   this.setState({user});
-  fetch("/api/puppies")
+  fetch("/api/puppies", {
+    headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
+  })
   .then(res => res.json())
   .then(puppies => this.setState({ puppies }))
   .catch(err => console.log(err))
 }
 /* --------- Comments ------- */
 
-createComments = (e) => {
+newComment = (e) => {
   e.preventDefault();
   fetch('/api/puppies', {
     headers: {
@@ -78,15 +81,15 @@ createComments = (e) => {
     method: 'POST',
     body: JSON.stringify({
       name: this.state.userName,
-      comments: this.state.commentsDescription
+      description: this.state.description
     })
 })
   .then(data => data.json())
   .then((puppies) => {
 
     this.setState({
-      userName: "",
-      commentsDescription:""
+      name: "",
+      description:""
     })
     
     this.props.history.push("/");
@@ -147,16 +150,16 @@ createComments = (e) => {
                 }/>
                 <Route path="/comments/new" render={() => 
                   userService.getUser() ?
-                  <CommentsPage  
+                  <NewCommentsPage  
                     onNameChange={this.onNameChange} 
-                    onCommentsChange={this.onCommentsChange} 
+                    onDescriptionChange={this.onDescriptionChange} 
                     name={this.state.userName} 
-                    comments={this.state.commentsDescription}
-                    createComments={this.createComments}
-                />
-                :
-                <Redirect to='/login' />
-                } />
+                    description={this.state.description}
+                    newComment={this.newComment}
+                  />
+                      :
+                  <Redirect to='/login' />
+                  }/>
           </Switch>
         </Router>
       </div>

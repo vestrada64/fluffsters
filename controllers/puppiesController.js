@@ -1,15 +1,15 @@
 const Puppy = require('./../models/Puppy');
 
 function create(req, res) {
-    let createComments = new Comment;
+    let newPuppy = new Puppy; 
 
-    createComments.name = req.body.name;
-    createComments.comments = req.body.comment;
+    newPuppy.name = req.body.name;
+    newPuppy.description = req.body.description;
 
-    createComments.save((err) => {
-        if (err) console.log(err);
-        Comment.find({})
-        .then(comments => res.json(comments).status(200));
+    newPuppy.save((err) => { 
+        if (err) console.log(err); 
+        Icecream.find({})
+        .then(puppies => res.json(puppies).status(200));
     })
 }
 
@@ -20,6 +20,5 @@ function index(req, res) {
 };
 
 module.exports = {
-    create,
     index
 }

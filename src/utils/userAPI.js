@@ -28,7 +28,7 @@ function signup(user) {
       throw new Error('Bad credentials');
     })
     .then(({token}) => token);
-  }
+}
 
 export default {
   signup,
