@@ -8,7 +8,7 @@ const NewCommentsPage = ({ onNameChange, onDescriptionChange, name, description,
         <form onSubmit={newComment}> 
 
         <label> 
-            Name 
+            Struggle dealt with? 
             <input type="text" value={name} onChange={onNameChange} />
         </label>
 

@@ -8,7 +8,7 @@ function create(req, res) {
 
     newPuppy.save((err) => { 
         if (err) console.log(err); 
-        Icecream.find({})
+        Puppy.find({})
         .then(puppies => res.json(puppies).status(200));
     })
 }
@@ -20,5 +20,6 @@ function index(req, res) {
 };
 
 module.exports = {
+    create,
     index
 }

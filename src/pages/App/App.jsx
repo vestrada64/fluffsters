@@ -76,7 +76,8 @@ newComment = (e) => {
   e.preventDefault();
   fetch('/api/puppies', {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json", 
+      'Authorization': 'Bearer ' + tokenService.getToken()
     },
     method: 'POST',
     body: JSON.stringify({
