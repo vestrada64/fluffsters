@@ -1,7 +1,11 @@
 import React from 'react';
+import './CommentsPage.css'
+import { Link } from 'react-router-dom';
 
-const CommentsPage = ({ onNameChange, onDescriptionChange, name, description, createComments }) => {
-    <form onSubmit={createComments}> 
+const CommentsPage = ({ onNameChange, onCommentsChange, name, comments, createComments }) => {
+    return (
+    <div>
+        <form onSubmit={createComments}> 
 
         <label> 
             Name 
@@ -11,11 +15,13 @@ const CommentsPage = ({ onNameChange, onDescriptionChange, name, description, cr
         <br/>
         <br/>
 
-        <textarea placeholder="Your experience with dogs? How have they helped you?" value={description} onChange={onDescriptionChange} />
+        <textarea placeholder="Your experience with dogs? How have they helped you?" value={comments} onChange={onCommentsChange} />
 
         <input type="submit" value ="New Comment" />
 
-     </form>
+        </form>
+    </div>
+    )
 }
 
 export default CommentsPage;

@@ -13,6 +13,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import PuppyPage from '../PuppyPage/PuppyPage';
 import ShowPuppyPage from './../ShowPuppyPage/ShowPuppyPage';
+import CommentsPage from './../CommentsPage/CommentsPage';
 
 
 class App extends Component {
@@ -24,10 +25,23 @@ class App extends Component {
       name: "",
       breed: "",
       image_url: "",
-      description: ""
-
+      description: "",
     }
-  }
+}
+
+onNameChange = (e) => {
+  this.setState({
+    userName: e.target.value
+  })
+}
+
+onCommentsChange = (e) => {
+  this.setState({
+    commentsDescription: e.target.value
+  })
+}
+
+/* ---------- login and logout --------- */
 
 handleLogout = () => {
     userService.logout();
@@ -52,6 +66,33 @@ componentDidMount() {
   .then(res => res.json())
   .then(puppies => this.setState({ puppies }))
   .catch(err => console.log(err))
+}
+/* --------- Comments ------- */
+
+createComments = (e) => {
+  e.preventDefault();
+  fetch('/api/puppies', {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: 'POST',
+    body: JSON.stringify({
+      name: this.state.userName,
+      comments: this.state.commentsDescription
+    })
+})
+  .then(data => data.json())
+  .then((puppies) => {
+
+    this.setState({
+      userName: "",
+      commentsDescription:""
+    })
+    
+    this.props.history.push("/");
+
+  })
+  .catch(err => console.log(err));
 }
 
   render() {
@@ -100,16 +141,29 @@ componentDidMount() {
                   />
                 }/>
                 <Route path="/puppies/:id" render={ (props) => 
-                <ShowPuppyPage 
+                  <ShowPuppyPage 
                 puppyData={this.state.puppies[props.match.params.id]} 
                 /> 
                 }/>
+                <Route path="/comments/new" render={() => 
+                  userService.getUser() ?
+                  <CommentsPage  
+                    onNameChange={this.onNameChange} 
+                    onCommentsChange={this.onCommentsChange} 
+                    name={this.state.userName} 
+                    comments={this.state.commentsDescription}
+                    createComments={this.createComments}
+                />
+                :
+                <Redirect to='/login' />
+                } />
           </Switch>
         </Router>
       </div>
     );
   }
 }
+                              
 
 
 
