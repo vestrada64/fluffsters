@@ -1,10 +1,8 @@
 * {
+    background-image: url(https://i.imgur.com/95jjBmg.gif);
     font-family: Comic Sans MS;
-    background: url(https://i.imgur.com/5RGsbDV.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 html, body {
