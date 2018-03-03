@@ -5,7 +5,7 @@ import './../ShowPuppyPage/ShowPuppyPage';
 
 const PuppyPage = ({ puppies }, props) => (
     <div>
-        <header>Puppy Gallery</header>
+        <header>Gallery | Struggles</header>
         <Link className ="homebtn"to='/'>Home</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <Link className ="aboutus" to='/aboutus'>What is this App about?</Link>

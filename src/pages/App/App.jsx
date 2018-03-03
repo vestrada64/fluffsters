@@ -154,11 +154,11 @@ newComment = (e) => {
                 <Route path="/comments/new" render={() => 
                   userService.getUser() ?
                   <NewCommentsPage  
-                    onNameChange={this.onNameChange} 
-                    onDescriptionChange={this.onDescriptionChange} 
-                    name={this.state.userName} 
-                    description={this.state.description}
-                    newComment={this.newComment}
+                  onNameChange={this.onNameChange} 
+                  onDescriptionChange={this.onDescriptionChange} 
+                  name={this.state.userName} 
+                  description={this.state.description}
+                  newComment={this.newComment}
                   />
                       :
                   <Redirect to='/login' />
