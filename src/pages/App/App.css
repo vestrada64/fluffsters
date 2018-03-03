@@ -7,6 +7,18 @@
 
 }
 
+html, body {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
 
 .App-title {

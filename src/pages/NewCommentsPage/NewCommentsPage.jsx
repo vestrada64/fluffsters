@@ -6,7 +6,7 @@ const NewCommentsPage = ({ onNameChange, onDescriptionChange, name, description,
     return (
     <div>
         <form onSubmit={newComment}> 
-
+        <Link className ="homebtn"to='/'>Home</Link>
         <label> 
             Struggle dealt with? 
             <input type="text" value={name} onChange={onNameChange} />

@@ -13,6 +13,8 @@ const NavBar = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to ="/puppies" className="NavBar-link">Gallery</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
+      <Link to ="/comments/new" className="NavBar-link">Comment</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     :
     <div>

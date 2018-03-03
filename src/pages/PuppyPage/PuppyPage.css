@@ -12,8 +12,7 @@ header {
     padding: 4px;
     border-radius: 20px;
     border: 1p solid #999;
-    position: relative;
-    left: 40%;
+
 }
 
 .aboutus {    
@@ -26,8 +25,7 @@ header {
     border-radius: 20px;
     border: 1p solid #999;   
     margin: 4px;
-    position: relative;
-    left: 45%;
+    
 }
 
 .Name {
@@ -36,8 +34,7 @@ header {
 
 .showpuppy {
     display: flex;
-    justify-content: flex-start;
-    justify-content: space-around;
+    display: inline-block;
     border-radius: 100%;
     box-shadow: 8px 8px 10px #aaa;
 }

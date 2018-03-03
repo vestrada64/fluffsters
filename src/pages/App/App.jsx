@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
   Redirect
 } from 'react-router-dom';
 import userService from '../../utils/userService';
@@ -15,6 +16,7 @@ import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import PuppyPage from '../PuppyPage/PuppyPage';
 import ShowPuppyPage from './../ShowPuppyPage/ShowPuppyPage';
 import NewCommentsPage from './../NewCommentsPage/NewCommentsPage';
+import NavBar from './../../components/NavBar/NavBar';
 
 
 class App extends Component {
@@ -93,7 +95,7 @@ newComment = (e) => {
       description:""
     })
     
-    this.props.history.push("/");
+    this.props.history.push("/puppies");
 
   })
   .catch(err => console.log(err));
