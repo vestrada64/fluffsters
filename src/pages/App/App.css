@@ -1,6 +1,6 @@
 * {
     background-image: url(https://i.imgur.com/95jjBmg.gif);
-    font-family: Comic Sans MS;
+    font-family: 'Gochi Hand', cursive;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -22,8 +22,8 @@ html, body {
 
 .App-title {
     text-align: center;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 3em;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2em;
     margin: .2em .5em;
     color: black;
 }

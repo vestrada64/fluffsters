@@ -146,11 +146,6 @@ newComment = (e) => {
                   <Redirect to='/login' 
                   />
                 }/>
-                <Route path="/puppies/:id" render={ (props) => 
-                  <ShowPuppyPage 
-                puppyData={this.state.puppies[props.match.params.id]} 
-                /> 
-                }/>
                 <Route path="/comments/new" render={() => 
                   userService.getUser() ?
                   <NewCommentsPage  
@@ -163,6 +158,11 @@ newComment = (e) => {
                       :
                   <Redirect to='/login' />
                   }/>
+                <Route path="/puppies/:id" render={ (props) => 
+                  <ShowPuppyPage 
+                puppyData={this.state.puppies[props.match.params.id]} 
+                /> 
+                }/>
           </Switch>
         </Router>
       </div>

@@ -8,16 +8,15 @@ const NewCommentsPage = ({ onNameChange, onDescriptionChange, name, description,
         <form onSubmit={newComment}> 
         <Link className ="homebtn"to='/puppies'>Back</Link>
         <label> 
-            Struggle dealt with? 
-            <input type="text" value={name} onChange={onNameChange} />
+            <header>Struggle dealt with? </header>
+            <input className="textinfo" type="text" value={name} onChange={onNameChange} />
         </label>
 
         <br/>
         <br/>
 
         <textarea placeholder="Your experience with dogs? How have they helped you?" value={description} onChange={onDescriptionChange} />
-
-        <input type="submit" value ="Comment" />
+        <input className="Comment" type="submit" value ="Comment" />
 
         </form>
     </div>

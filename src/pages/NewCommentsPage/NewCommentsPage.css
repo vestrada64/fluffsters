@@ -1,0 +1,24 @@
+input {
+    display: inline-block;
+    width: 200px;
+}
+
+textarea {
+    font-size: 20px;
+    width: 600px;
+    height: 100px;
+}
+
+.Comment {
+    color: #fff;
+  background: hsl(227, 10%, 10%);
+    margin: 12px;
+    float: right;
+    
+}
+
+.Comment:hover,
+.Comment:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
