@@ -106,7 +106,7 @@ newComment = (e) => {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Fluffsters 🐶</h1>
-          <h2 className="info"> Feeling down? You've come to the right place! </h2>
+          <h2 className="info">Puppies cure us, they break the cycle</h2>
         </header>
         <Router>
           <Switch>

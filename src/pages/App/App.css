@@ -6,6 +6,7 @@
 }
 
 html, body {
+    color: black;
     display: flex;  
     justify-content: center;
     align-items: center;
@@ -24,7 +25,7 @@ html, body {
     font-family: 'Advent Pro', sans-serif;
     font-size: 3em;
     margin: .2em .5em;
-    color: white;
+    color: black;
 }
 
 header {
@@ -34,10 +35,9 @@ header {
 
 .info {
     text-align: center;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 24px;
-    margin: .2em .5em;
-    color: white; 
+    font-family: 'Advent Pro';
+    font-size: 30px;
+    color: black; 
 }
 
 .NavBar-link {
