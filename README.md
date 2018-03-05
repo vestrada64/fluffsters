@@ -1,6 +1,6 @@
 # Fluffsters
 
-![](https://i.imgur.com/wNcnPad.png)
+![](https://i.imgur.com/k9ingq2.png)
 
 * Comfort, companionship, and love. If depression makes you feel lonely, pets can break the cycle. 
 
