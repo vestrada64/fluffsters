@@ -8,7 +8,7 @@ const ShowPuppyPage = ({ puppyData }, props) => (
         <h1 className="puppyname">{puppyData.name}</h1>
         <h2 className="puppybreed">{puppyData.breed}</h2>
         <h3 className="puppyinfo">{puppyData.description}</h3>
-        <img className="imgpuppy" src={puppyData.image_url}></img>
+        <img alt="puppy" className="imgpuppy" src={puppyData.image_url}></img>
     </div>
 )
 

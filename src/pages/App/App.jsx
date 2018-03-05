@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from 'react-router-dom';
 import userService from '../../utils/userService';
@@ -16,8 +15,6 @@ import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import PuppyPage from '../PuppyPage/PuppyPage';
 import ShowPuppyPage from './../ShowPuppyPage/ShowPuppyPage';
 import NewCommentsPage from './../NewCommentsPage/NewCommentsPage';
-import NavBar from './../../components/NavBar/NavBar';
-
 
 class App extends Component {
 
@@ -65,7 +62,7 @@ handleLogin = () => {
 componentDidMount() {
   let user = userService.getUser();
   this.setState({user});
-  fetch("/api/puppies", {
+  fetch('/api/puppies', {
     headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
   })
   .then(res => res.json())
@@ -105,7 +102,7 @@ newComment = (e) => {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Fluffsters 🐶</h1>
+          <h1 className="App-title">Fluffsters</h1>
           <h2 className="info">Puppies cure us, they break the cycle</h2>
         </header>
         <Router>
@@ -146,7 +143,7 @@ newComment = (e) => {
                   <Redirect to='/login' 
                   />
                 }/>
-                <Route path="/comments/new" render={() => 
+                <Route exact path="/comments/new" render={() => 
                   userService.getUser() ?
                   <NewCommentsPage  
                   onNameChange={this.onNameChange} 
@@ -158,7 +155,7 @@ newComment = (e) => {
                       :
                   <Redirect to='/login' />
                   }/>
-                <Route path="/puppies/:id" render={ (props) => 
+                <Route exact path="/puppies/:id" render={ (props) => 
                   <ShowPuppyPage 
                 puppyData={this.state.puppies[props.match.params.id]} 
                 /> 
@@ -170,7 +167,4 @@ newComment = (e) => {
   }
 }
                               
-
-
-
 export default App;

@@ -6,7 +6,7 @@ const LandingPage = (props) => {
   return (
     <div className="LandingPage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
-      <img className="intropuppy" src="https://i.imgur.com/Ovfsqoa.gif"></img>
+      <img alt="intropuppy" className="intropuppy" src="https://i.imgur.com/Ovfsqoa.gif"></img>
       </div>
   );
 
