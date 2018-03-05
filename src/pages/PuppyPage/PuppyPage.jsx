@@ -13,7 +13,7 @@ const PuppyPage = ({ puppies }, props) => (
         <Link to ="/comments/new" className="homebtn">Comment</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
         <div className="puppyimg">
-        { puppies.map((puppy, idx) => <div key={idx}><Link className="Name" to={`/puppies/${idx}`}><h3 className="puppyName">{puppy.name}</h3><img alt="puppy" className="showpuppy" src={puppy.image_url}></img></Link></div>) }
+        { puppies.map((puppy, idx) => <div key={idx}><Link className="Name" to={`/puppies/${idx}`}><h3 className="puppyName">{puppy.name}</h3><img alt="" className="showpuppy" src={puppy.image_url}></img></Link></div>) }
         </div>
     </div>
         

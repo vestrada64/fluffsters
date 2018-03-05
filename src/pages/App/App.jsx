@@ -106,33 +106,33 @@ newComment = (e) => {
           <h2 className="info">Puppies cure us, they break the cycle</h2>
         </header>
         <Router>
-          <Switch>
-            <Route exact path='/' render={() => 
-                    <LandingPage 
-                    user={this.state.user}
-                    handleLogout={this.handleLogout}
-                    />
-                  }/>
-            <Route exact path='/login' render={(props) => 
+            <Switch>
+          <Route exact path='/' render={() => 
+                  <LandingPage 
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                  />
+                }/>
+          <Route exact path='/login' render={(props) => 
                   <LoginPage
                     {...props}
                     handleLogin={this.handleLogin}
                   />
                 }/>
-                <Route exact path='/signup' render={(props) => 
+          <Route exact path='/signup' render={(props) => 
                   <SignupPage
-                    {...props}
-                    handleSignup={this.handleSignup}
+                  {...props}
+                  handleSignup={this.handleSignup}
                   />
                 }/>
-                <Route exact path='/aboutus' render={() =>
+          <Route exact path='/aboutus' render={() =>
                   userService.getUser() ?
                   <AboutUsPage />
                     :
                   <Redirect to='/login' 
                   />
                 }/>
-                <Route exact path='/puppies' render={() =>
+          <Route exact path='/puppies' render={() =>
                   userService.getUser() ?
                   <PuppyPage
                   user={this.state.user}
@@ -143,7 +143,7 @@ newComment = (e) => {
                   <Redirect to='/login' 
                   />
                 }/>
-                <Route exact path="/comments/new" render={() => 
+          <Route exact path="/comments/new" render={() => 
                   userService.getUser() ?
                   <NewCommentsPage  
                   onNameChange={this.onNameChange} 
@@ -155,7 +155,7 @@ newComment = (e) => {
                       :
                   <Redirect to='/login' />
                   }/>
-                <Route exact path="/puppies/:id" render={ (props) => 
+          <Route exact path="/puppies/:id" render={ (props) => 
                   <ShowPuppyPage 
                 puppyData={this.state.puppies[props.match.params.id]} 
                 /> 
