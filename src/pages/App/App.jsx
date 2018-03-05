@@ -54,6 +54,14 @@ handleSignup = () => {
 
 handleLogin = () => {
   this.setState({user: userService.getUser()});
+  let user = userService.getUser();
+  this.setState({user});
+  fetch('/api/puppies', {
+    headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
+  })
+  .then(res => res.json())
+  .then(puppies => this.setState({ puppies }))
+  .catch(err => console.log(err))
 }
 
 /*------- Lifecycle Methods ---------*/
