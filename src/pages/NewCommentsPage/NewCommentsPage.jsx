@@ -9,7 +9,7 @@ const NewCommentsPage = ({ onNameChange, onDescriptionChange, name, description,
         <Link className ="homebtn"to='/puppies'>Back</Link>
         <label> 
             <header>Struggle dealt with? </header>
-            <input className="textinfo" type="text" value={name} onChange={onNameChange} />
+            <input type="text" className="textinfo" placeholder="Struggle?" value={name} onChange={onNameChange} />
         </label>
 
         <br/>
