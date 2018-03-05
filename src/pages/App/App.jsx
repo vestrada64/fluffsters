@@ -56,7 +56,6 @@ handleLogin = () => {
   this.setState({user: userService.getUser()});
 }
 
-  
 /*------- Lifecycle Methods ---------*/
 
 componentDidMount() {

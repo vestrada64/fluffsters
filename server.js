@@ -8,7 +8,6 @@ var app = express();
 require('dotenv').config();
 require('./config/database');
 
-app.use(logger('dev'));
 
 // Configure both serve-favicon & static middlewares
 // to serve from the production 'build' folder
@@ -16,6 +15,7 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(bodyParser.json());
+app.use(logger('dev'));
 
 // Mount our custom auth middleware
 app.use(require('./config/auth'));
