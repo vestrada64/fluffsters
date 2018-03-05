@@ -7,7 +7,7 @@ const LandingPage = (props) => {
     <div className="LandingPage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
       <img alt="intropuppy" className="intropuppy" src="https://i.imgur.com/Ovfsqoa.gif"></img>
-      </div>
+    </div>
   );
 
 }
