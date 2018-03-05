@@ -37,6 +37,8 @@ h4 {
 .aboutusimg {
     float: left;
     margin: 40px;
+    border-radius: 100%;
+    box-shadow: 8px 8px 10px #aaa;
 }
 
 .abouthomebtn {
