@@ -19,9 +19,10 @@
 * [Heroku](https://fluffsters.herokuapp.com/)
 
 #### Unsolved Problems 
-* Adding a Dog API of a puppy slideshow.
+* Need to add a comment's model for its own page. 
 
 ##### Future Enhancements
 * Being able to favorite a puppy and have your own favorites puppy page.
 * Add a location of where you can adopt specific dogs to expand the app. 
 * Best locations to go to where you can play with dogs and drink coffee. 
+* Adding a Dog API of a puppy slideshow.
