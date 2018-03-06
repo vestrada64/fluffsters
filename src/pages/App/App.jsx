@@ -168,7 +168,7 @@ newComment = (e) => {
                           name={this.state.userName} 
                           description={this.state.description}
                           newComment={this.newComment}
-                    />
+                      />
                         :
                     <Redirect to='/login' />
                       }/>
