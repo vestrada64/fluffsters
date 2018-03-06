@@ -13,6 +13,7 @@
 * JSON Web Tokens
 * Express
 * Mongoose
+* Node
 * MongoDB
 
 ### Getting Started
