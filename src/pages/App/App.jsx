@@ -97,8 +97,8 @@ newComment = (e) => {
     },
     method: 'POST',
     body: JSON.stringify({
-      name: this.state.userName,
-      description: this.state.description
+    name: this.state.userName,
+    description: this.state.description
     })
 })
   .then(data => data.json())
