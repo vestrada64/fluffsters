@@ -50,13 +50,23 @@ handleLogout = () => {
   
 handleSignup = () => {
   this.setState({user: userService.getUser()});
+
+  let user = userService.getUser();
+  this.setState({user});
+    fetch('/api/puppies', {
+    headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
+  })
+  .then(res => res.json())
+  .then(puppies => this.setState({ puppies }))
+  .catch(err => console.log(err))
 }
 
 handleLogin = () => {
   this.setState({user: userService.getUser()});
+
   let user = userService.getUser();
   this.setState({user});
-  fetch('/api/puppies', {
+    fetch('/api/puppies', {
     headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
   })
   .then(res => res.json())
@@ -69,7 +79,7 @@ handleLogin = () => {
 componentDidMount() {
   let user = userService.getUser();
   this.setState({user});
-  fetch('/api/puppies', {
+    fetch('/api/puppies', {
     headers: new Headers({'Authorization': 'Bearer ' + tokenService.getToken()})
   })
   .then(res => res.json())
@@ -122,8 +132,8 @@ newComment = (e) => {
               }/>
           <Route exact path='/login' render={(props) => 
                 <LoginPage
-                  {...props}
-                  handleLogin={this.handleLogin}
+                {...props}
+                handleLogin={this.handleLogin}
                 />
               }/>
           <Route exact path='/signup' render={(props) => 
@@ -150,21 +160,21 @@ newComment = (e) => {
                 <Redirect to='/login' 
                 />
               }/>
-          <Route exact path="/comments/new" render={() => 
+          <Route path="/comments/new" render={() => 
                 userService.getUser() ?
                 <NewCommentsPage  
-                onNameChange={this.onNameChange} 
-                onDescriptionChange={this.onDescriptionChange} 
-                name={this.state.userName} 
-                description={this.state.description}
-                newComment={this.newComment}
+                      onNameChange={this.onNameChange} 
+                      onDescriptionChange={this.onDescriptionChange} 
+                      name={this.state.userName} 
+                      description={this.state.description}
+                      newComment={this.newComment}
                 />
                     :
-                  <Redirect to='/login' />
+                <Redirect to='/login' />
                   }/>
           <Route exact path="/puppies/:id" render={ (props) => 
-                  <ShowPuppyPage 
-                puppyData={this.state.puppies[props.match.params.id]} 
+                <ShowPuppyPage 
+                  puppyData={this.state.puppies[props.match.params.id]} 
                 /> 
                 }/>
           </Switch>
